@@ -1,4 +1,4 @@
-# BEVFusion 教学实现
+# BEVFusion 实现
 
 一个用纯 PyTorch 手写的 BEVFusion 精简实现，目标是**把多模态 3D 检测的每一步摊开写清楚**，
 而不是复现论文的精度。
