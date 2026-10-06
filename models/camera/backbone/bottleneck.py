@@ -5,7 +5,7 @@ import torch.nn as nn
 class Bottleneck(nn.Module):
 
     expansion = 4
-    def __init__(self, in_channels, mid_channels, stride, downsample):
+    def __init__(self, in_channels, mid_channels, stride, downsample=None):
         super().__init__()
 
         self.out_channels = mid_channels * self.expansion
