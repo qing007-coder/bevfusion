@@ -42,3 +42,19 @@ class Config:
 
     num_classes = 3             # 检测类别数量，例如 Car、Pedestrian、Cyclist
     box_dim = 7                 # 3D 检测框维度：x, y, z, w, l, h, yaw
+
+    # ---------------- Camera 分支 ----------------
+
+    resnet_layers = [3, 4, 6, 3]                 # ResNet-50 每个 stage 的 Bottleneck 数量
+
+    resnet_channels = [256, 512, 1024, 2048]     # ResNet 四个 stage 的输出通道（给 FPN lateral 用）
+
+    depth_bins = 80             # 深度离散化的 bin 数，ViewTransform 抬升时的 D 维
+    depth_min = 1.0             # 最小深度，单位 m
+    depth_max = 80.0            # 最大深度，单位 m
+
+    # ---------------- 检测头 / 解码 ----------------
+
+    hidden_channels = 128       # 检测头共享卷积的通道数
+    top_k = 100                 # 解码时每帧保留的候选框数量
+    score_threshold = 0.1       # 解码时的分数阈值
